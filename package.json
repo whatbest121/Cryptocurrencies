@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "dev": "bun run src/index.ts"
+  },
+  "name": "cryptocurrencies",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@types/jsonwebtoken": "^9.0.8",
+    "bcryptjs": "^3.0.2",
+    "elysia": "^1.2.15",
+    "elysia-api-docs": "^1.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.10.1"
+  }
+}
