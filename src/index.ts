@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import { MongoInitial } from "./momgo/initial";
 import { LoginHandle } from "./handle/auth";
 import swaggers from "./plugin/swagger";
+import { FiatAndCryptocurrency } from "./handle/fiatAndCryptocurrency";
 
 await mongoose.connect("mongodb://localhost:27017/mydb");
 const app = new Elysia()
@@ -14,9 +15,10 @@ const app = new Elysia()
       path: "/swagger",
     }),
   )
-  .use(LoginHandle("/auth"))
-
   .get("/", () => "Hello, Bun + Elysia! 🚀")
+  .use(LoginHandle("/auth"))
+  .use(FiatAndCryptocurrency("/fiatAndCryptocurrency"))
+
 
 
 app.listen(3000, () => {
