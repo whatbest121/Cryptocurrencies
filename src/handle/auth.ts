@@ -33,7 +33,7 @@ export const LoginHandle = <const TPath extends `/${string}`>(path: TPath) =>
             const validPassword = await bcrypt.compare(password, user.hashedPassword);
             if (!validPassword) throw new Error("Invalid username or password!")
 
-            const token = jwt.sign({ userId: user._id }, SECRET_KEY, { expiresIn: "1h" });
+            const token = jwt.sign({ user: { username: user.username, _id: user._id } }, SECRET_KEY, { expiresIn: "1h" });
             return { message: "Login successful!", token };
         },
             {

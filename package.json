@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "bun run src/index.ts"
+    "dev": "bun run --watch src/index.ts"
   },
   "name": "cryptocurrencies",
   "module": "index.ts",
