@@ -2,6 +2,10 @@
 
 ## Prerequisites
 
+## Docker
+```
+docker-compose up --build  
+```
 ## Built With
 
 - [Bun](https://bun.sh) - JavaScript runtime & package manager

@@ -9,7 +9,6 @@ import { Order } from "./handle/order";
 import { Payment } from "./handle/pay";
 import { Exchange } from "./handle/exchange";
 
-await mongoose.connect("mongodb://localhost:27017/mydb");
 const app = new Elysia()
 
   .use(MongoInitial)
@@ -37,7 +36,6 @@ const app = new Elysia()
   )
 app.listen(3000, () => {
   console.log(`🦊 Elysia is running at http://localhost:3000`);
-  console.log("✅ MongoDB connected successfully!");
 })
 
 
